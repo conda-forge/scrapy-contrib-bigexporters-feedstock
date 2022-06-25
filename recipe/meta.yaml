@@ -24,9 +24,6 @@ requirements:
     - scrapy >=2.4.0
 
 test:
-  imports:
-    - tests
-    - zuinnote
   commands:
      - pip check
   requires:

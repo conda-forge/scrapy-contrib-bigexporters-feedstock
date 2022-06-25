@@ -18,6 +18,7 @@ requirements:
   host:
     - python >=3.6
     - pip
+    - flit
   run:
     - python >=3.6
     - scrapy >=2.4.0
@@ -30,6 +31,7 @@ test:
      - pip check
   requires:
      - pip
+     - flit
 
 about:
   home: https://github.com/ZuInnoTe/scrapy-contrib-bigexporters

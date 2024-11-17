@@ -1,13 +1,13 @@
 {% set name = "scrapy-contrib-bigexporters" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 977324c20c554f66cdcec178950cee2ede2dede920d64de82f032e571a0efb81
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name.replace('-', '_').lower() }}/{{ name.replace('-', '_').lower() }}-{{ version }}.tar.gz
+  sha256: e39bf629058dc41d97fc7af786cd79044c98f9aa964fb307e301354c1c117c14
 
 build:
   number: 0
@@ -25,10 +25,10 @@ requirements:
 
 test:
   commands:
-     - pip check
+    - pip check
   requires:
-     - pip
-     - flit
+    - pip
+    - flit
 
 about:
   home: https://codeberg.org/ZuInnoTe/scrapy-contrib-bigexporters

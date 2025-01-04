@@ -21,7 +21,7 @@ requirements:
     - flit
   run:
     - python >={{ python_min }}
-    - scrapy >=2.4.0
+    - scrapy >=2.11.0
 
 test:
   commands:

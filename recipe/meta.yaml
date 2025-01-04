@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name.replace('-', '_').lower() }}/{{ name.replace('-', '_').lower() }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name.replace('-', '_').lower() }}/{{ name.replace('-', '_').lower() }}-{{ version }}.tar.gz
   sha256: e39bf629058dc41d97fc7af786cd79044c98f9aa964fb307e301354c1c117c14
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - flit
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - scrapy >=2.4.0
 
 test:
@@ -29,6 +29,7 @@ test:
   requires:
     - pip
     - flit
+    - python {{ python_min }}
 
 about:
   home: https://codeberg.org/ZuInnoTe/scrapy-contrib-bigexporters

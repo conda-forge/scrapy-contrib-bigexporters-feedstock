@@ -1,5 +1,5 @@
 {% set name = "scrapy-contrib-bigexporters" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name.replace('-', '_').lower() }}/{{ name.replace('-', '_').lower() }}-{{ version }}.tar.gz
-  sha256: 394566bbca5904246f00332afbbd6f42012df185c684f89ef936f3da5bf80881
+  sha256: bed46e48182979b8e505f0bd7be9b9f1235b4f72df5a959b57e608dfe25525b4
 
 build:
   number: 0
